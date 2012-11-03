@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<title>Popcorn GoogleMap Tweening Demo</title>
+
+		<script type="text/javascript" src="http://popcornjs.org/code/dist/popcorn-complete.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=geometry&sensor=false"></script>
+
+		<script type="text/javascript">
+			Popcorn(function(popcorn) {
+				// Load a video of Cambridge.
+				var pop = popcorn.youtube(
+					"#video",
+					"http://www.youtube.com/watch?v=zvUQAi11bjc&fs=0&showinfo=0&iv_load_policy=3&autohide=1&modestbranding=1&rel=0&theme-light"
+				);
+
+				// Add streetview images.
+				pop.googlemap({
+					start: 0,
+					end: 120,
+					target: "streetview",
+					type: "STREETVIEW",
+					lat: 52.208422,
+					lng: 0.118521,
+					heading: 180+45,
+					tween: [
+						{
+							position: {
+								lat: 52.207384,
+								lng: 0.11801
+							},
+							pov: {
+								heading: 180+45,
+								zoom: 1,
+								pitch: 1
+							},
+							interval: 5000
+						},
+						{
+							position: {
+								lat: 52.206703,
+								lng: 0.11828
+							},
+							pov: {
+								heading: 180,
+								zoom: 1,
+								pitch: 1
+							},
+							interval: 5000
+						},
+						{
+							position: {
+								lat: 52.205805,
+								lng: 0.118002
+							},
+							pov: {
+								heading: 180,
+								zoom: 1,
+								pitch: 1
+							},
+							interval: 5000
+						},
+						{
+							position: {
+								lat: 52.204556,
+								lng: 0.117588
+							},
+							pov: {
+								heading: 180+45,
+								zoom: 1,
+								pitch: 1
+							},
+							interval: 5000
+						}
+					]
+				});
+
+				// Cue a stop after thirty seconds when the walk is over.
+				pop.cue(30, function() { pop.pause(); });
+
+				// Roll camera!
+				pop.play();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="video" style="width: 640px; height: 480px; float: right;" ></div>
+		<div id="streetview" style="width: 480px; height: 480px;" ></div>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>Daily Puppy Popcorn Select Demo</title>
+
+		<script type="text/javascript" src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
+		<script type="text/javascript">
+			var youtube_options = "&fs=0&showinfo=0&iv_load_policy=3&autohide=1&modestbranding=1&rel=0&theme-light";
+			var puppies = {
+				"maddi": "http://www.youtube.com/watch?v=RLEGlJYgQUc",
+				"polly": "http://www.youtube.com/watch?v=uYmZnt9QNNA",
+				"deer": "http://www.youtube.com/watch?v=PDDP_RsER_0",
+				"honey": "http://www.youtube.com/watch?v=Hu8a_w73rLc"
+			}
+
+			var current_puppy = null;
+
+			function play(new_puppy) {
+				// Destroy currently playing puppy if any
+				if (current_puppy) {
+					current_puppy.destroy();
+					current_puppy = null;
+				}
+
+				// Clear active nav items and mark new puppy active
+				for (var puppy in puppies) {
+					document.getElementById(puppy).className = "";
+				}
+				document.getElementById(new_puppy).className = "active";
+
+				// Play new puppy
+				current_puppy = Popcorn.youtube("#video", puppies[new_puppy] + youtube_options);
+				current_puppy.play();
+			};
+
+			Popcorn(function() {
+				play("maddi");
+			});
+		</script>
+
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+	</head>
+	<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="span4">
+				<ul class="nav nav-tabs nav-stacked">
+					<li id="maddi" class="active"><a href="#" onclick="play('maddi');">Maddi</a></li>
+					<li id="polly"><a href="#" onclick="play('polly');">Polly</a></li>
+					<li id="deer"><a href="#" onclick="play('deer');">Deer</a></li>
+					<li id="honey"><a href="#" onclick="play('honey');">Honey</a></li>
+				</ul>
+			</div>
+			<div class="span8">
+				<div id="video" style="width: 600px; height: 338px;" ></div>
+			</div>
+		</div>
+	</div>
+
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Daily Puppy Popcorn Event Demo</title>
+
+		<script type="text/javascript" src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
+
+		<script type="text/javascript">
+			Popcorn(function(popcorn) {
+				// Load a cute puppy video.
+				var pop = popcorn.youtube(
+					"#video",
+					"http://www.youtube.com/watch?v=RLEGlJYgQUc&fs=0&showinfo=0&iv_load_policy=3&autohide=1&modestbranding=1&rel=0&theme-light"
+				);
+
+				// Attach an action to happen when the video is paused.
+				pop.on("pause", function(e) {
+					console.log("Paused at " + pop.currentTime());
+					alert("Oh noes! Puppy is stray! Bring back the puppy?");
+					pop.play();
+				});
+
+				// Roll camera!
+				pop.play();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="video" style="width: 960px; height: 540px;" ></div>
+	</body>
+</html>

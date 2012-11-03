@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Popcorn GoogleMap Tweening Demo</title>
+
+		<script type="text/javascript" src="popcorn-complete-walking.js"></script>
+
+		<script type="text/javascript">
+			Popcorn(function(popcorn) {
+				// Load a video of Cambridge.
+				var pop = popcorn.youtube(
+					"#video",
+					"http://www.youtube.com/watch?v=zvUQAi11bjc&fs=0&showinfo=0&iv_load_policy=3&autohide=1&modestbranding=1&rel=0&theme-light"
+				);
+
+				// Add streetview images.
+				pop.googlemap({
+					start: 0,
+					end: 120,
+					target: "streetview",
+					type: "STREETVIEW",
+					location: "St John's College, Cambridge",
+					heading: 180,
+					tween: "Kings College, Cambridge",
+					interval: 5000
+				});
+
+				// Cue a stop after two minutes when the walk is over.
+				pop.cue(120, function() { pop.pause(); });
+
+				// Roll camera!
+				pop.play();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="video" style="width: 640px; height: 480px; float: right;" ></div>
+		<div id="streetview" style="width: 480px; height: 480px;" ></div>
+	</body>
+</html>
