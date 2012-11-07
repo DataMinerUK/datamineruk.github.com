@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Location-based Storytelling with Popcorn.js</title>
+		
+		<script type="text/javascript" src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				
+			    // Create a popcorn instance by calling the Vimeo player plugin
+			    var pop = Popcorn.smart('#video', 'transitions.mp4');
+				
+				// Hide controls
+				pop.controls(false);
+			
+				// This is where the Popcorn magic will go
+				
+				// Adding streetview of outside of Monument Station
+				pop.googlemap({
+				  "start": 0,
+				  "end": 9,
+				  "target": "map",
+				  "type": "STREETVIEW",
+				  "zoom": 1,
+				  "lat": 51.510968,
+				  "lng": -0.08607699999993201,
+				});
+				
+				// Adding the first overlay
+				pop.image({
+				  "start": 1,
+				  "end": 2,
+				  "target": "overlay",
+				  "src": "https://dl.dropbox.com/u/29645873/Popcorn/scene1.png",
+				});
+				
+				// Pause after 1 second, wait for interaction
+				pop.cue(1, function() { pop.pause(); });
+				
+				// Adding a roadmap of King William Street
+				pop.googlemap({
+				  "start": 9,
+				  "end": 18,
+				  "target": "map",
+				  "type": "ROADMAP",
+				  "zoom": 16,
+				  "lat": 51.51197053292998,
+				  "lng": -0.0870692613768842,
+				});
+				
+				// Adding the second overlay
+				pop.image({
+				  "start": 10,
+				  "end": 11.5,
+				  "target": "overlay",
+				  "src": "https://dl.dropbox.com/u/29645873/Popcorn/scene2.png",
+				});
+				
+				// Pause after 11 seconds, wait for interaction
+				pop.cue(11, function() { pop.pause(); });
+				
+				// Adding the third overlay
+				pop.image({
+				  "start": 19,
+				  "end": 20.5,
+				  "target": "overlay",
+				  "src": "https://dl.dropbox.com/u/29645873/Popcorn/scene3.png",
+				});
+				
+				// Adding streetview of where PC Harwood was when he failed to arrest a protestor
+				pop.googlemap({
+				  "start": 18,
+				  "end": 28,
+				  "target": "map",
+				  "type": "STREETVIEW",
+				  "lat": 51.513372,
+				  "lng": -0.08656300000006922,
+				  "zoom": 1,
+				});
+				
+				// Pause after 20 seconds, wait for interaction
+				pop.cue(20, function() { pop.pause(); });
+				
+				// Adding roadmap of Change Alley, Iam Tomlinson's diversion that brought him to meet PC Harwood
+				pop.googlemap({
+				  "start": 28,
+				  "end": 37,
+				  "target": "map",
+				  "type": "ROADMAP",
+				  "location": "Change Alley, City of London, London",
+				  "zoom": 17,
+				});
+				
+				// Adding the fourth overlay
+				pop.image({
+				  "start": 29,
+				  "end": 30.5,
+				  "target": "overlay",
+				  "src": "https://dl.dropbox.com/u/29645873/Popcorn/scene4.png",
+				});
+				
+				// Pause after 30 seconds, wait for interaction
+				pop.cue(30, function() { pop.pause(); });
+				
+				// Adding streetview of Cornhill where Ian Tomlinson was pushed over
+				pop.googlemap({
+				  "start": 37,
+				  "end": 47,
+				  "target": "map",
+				  "type": "STREETVIEW",
+				  "lat": 51.513366,
+				  "lng": -0.08672200000000885,
+				  "heading": 49.01785714285715,
+				  "pitch": 2.1249999999999964,
+				  "zoom": 1,
+				});
+				
+				// Adding the fifth overlay
+				pop.image({
+				  "start": 38,
+				  "end": 39.5,
+				  "target": "overlay",
+				  "src": "https://dl.dropbox.com/u/29645873/Popcorn/scene5.png",
+				});
+				
+				// Pause after 39 seconds, wait for interaction
+				pop.cue(39, function() { pop.pause(); });
+				
+				// Adding a roadmap showing the street where Ian Tomlinson collapsed
+				pop.googlemap({
+				  "start": 47,
+				  "end": 51,
+				  "target": "map",
+				  "type": "ROADMAP",
+				  "lat": 51.51347115335745,
+				  "lng": -0.08580359259030779,
+				  "zoom": 16,
+				});
+				
+				// Adding the sixth overlay
+				pop.image({
+				  "start": 48,
+				  "end": 51,
+				  "target": "overlay",
+				  "src": "https://dl.dropbox.com/u/29645873/Popcorn/scene6.png",
+				});
+				
+				// Pause after 50 seconds, wait for interaction
+				pop.cue(50, function() { pop.pause(); });
+
+				// Popcorn Image plugin keeps adding links in the overlays which we don't want
+				// Horrible hack: So remove the anchor hrefs on each frame.
+				pop.code({
+					start: 0,
+					end: 70,
+					onFrame: function() { $('#overlay a').removeAttr("href"); }
+				});
+				
+				// Info panel pagination
+				var paging = {
+					current : 1,
+					min : 1,
+					max : 6,
+					cues: [0, 1, 11, 20, 30, 39, 49]
+				};
+
+				var list = $('ul#slide-deck');
+
+				$('#next').click(function(event) {
+
+					// can we page forward?
+					if (paging.current + 1 <= paging.max) {
+						// Play on from slide transition
+						pop.play();
+						
+						paging.current += 1;
+
+						// hide whatever element is current
+						list.find('li.current').removeClass('current');
+
+						// find the new current element and set it as the current element.
+						list.find('#slide' + paging.current).addClass('current');
+					}
+				});
+
+				$('#prev').click(function(event) {
+					// can we page back?
+					if (paging.current - 1 >= paging.min) {
+						paging.current -= 1;
+						
+						// Jump back to previous transition slide
+						pop.currentTime(paging.cues[paging.current]);
+
+						// hide whatever element is current
+						list.find('li.current').removeClass('current');
+
+						// find the new current element and set it as the current element.
+						list.find('#slide' + paging.current).addClass('current');
+					} 
+				});
+				
+				// play the video right away
+				pop.play();
+			});
+		</script>
+		
+		<style>
+			#container {
+				height: 500px;
+				width: 1020px;
+			}
+			#left-column {
+				width: 400px;
+				padding: 10px 10px 0px;
+			}
+			#right-column {
+				float: right;
+				width: 620px;
+				padding: 10px 0px 0px 10px;
+			}
+			
+			#info-panel {
+				height: 300px;
+			}
+			a.controls {
+			  cursor: pointer;
+			  text-decoration: underline;
+			}
+			#slide-deck {
+				font-family: Arial;
+				font-size: 10pt;
+				padding: 0px 40px 10px 10px;
+			}
+			#slide-deck li {
+			  display: none; 
+			}
+			#slide-deck li.current {
+			  display: inline; 
+			}
+			#map {
+				height: 200px;
+				width: 360px;
+			}
+			#overlay {
+				position: absolute;
+			}
+			#video {
+				height: 500px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="container">
+			<div id="right-column">
+				<div id="video-block">
+					<div id="overlay">
+					</div>
+					<div id="video" style="width: 620px; height: 500px;">
+					</div>
+				</div>
+			</div>
+		
+			<div id="left-column">
+				<div id="info-panel">
+					<a id='prev' class="controls">previous</a>
+					<a id='next' class="controls" style="float: right">next</a>
+					
+					<ul id='slide-deck'>
+						<li id='slide1' class="current">
+							<h1>Introduction: 1 of 6</h1>
+							<p>PC Simon Harwood has been found not guilty of the manslaughter of Ian Tomlinson, pictured below. Mr Tomlinson died on 1 April 2009 during the G20 protests in London. He was caught up in the demonstrations as he walked home.</p>
+							<p>He died shortly after he was pushed to the ground by PC Harwood. The court heard the push was a "gratuitous act of aggression" directly linked to Mr Tomlinson's death, but PC Harwood said he had simply used "reasonable force in order to clear police lines". </p>
+						</li>
+						
+						<li id='slide2'>
+							<h1>Journey begins: 2 of 6</h1>
+							<p>Mr Tomlinson did not have a full time job but often helped friends with a newspaper stand at Monument Tube station. He began his journey home shortly before 19:00. Mr Tomlinson was an alcoholic and had been known to sleep rough. The court was told he had been drinking alcohol since that morning.</p>
+							<p>He set off down King William Street on his way to the hostel he was staying at in Smithfield. But he soon found his way was blocked by the police and protesters gathered in the streets around Bank. Thousands of people had been demonstrating across the City that day.</p>
+						</li>
+						
+						<li id='slide3'>
+							<h1>Road block: 3 of 6</h1>
+							<p>Unable to go down King William Street, Mr Tomlinson took a diversion. CCTV picked up his route again as he reached Lombard Street.</p>
+							<p>PC Harwood was nearby in Cornhill. He had attempted to arrest a protester who had been writing: "All cops are bastards," on the side of a police van, see video below. He had joined the Metropolitan Police in 2004, as part of the Territorial Support Group. The prosecution said PC Harwood's failure to arrest the vandal had left him in a state where his "blood was up". The officer said: "To me it was as if everyone was out for me because of what I'd done trying to arrest the graffiti man."</p>
+						</li>
+						
+						<li id='slide4'>
+							<h1>Diversion: 4 of 6</h1>
+							<p>Mr Tomlinson's way was blocked by police officers as he tried to navigate the alleyways between Lombard Street and Cornhill.</p>
+							<p>PC Harwood had joined other police officers on Threadneedle Street, to the north of Cornhill. He had been in charge of a police van, but he left his position following the attempted arrest of the graffiti man.</p>
+							<p>The policeman's path would shortly collide with that of Mr Tomlinson as several officers did a sweep of Royal Exchange Buildings.</p>
+						</li>
+						
+						<li id='slide5'>
+							<h1>Pushed over: 5 of 6</h1>
+							<p>Mr Tomlinson wanted to walk through Royal Exchange Buildings to continue going home. But as the police attempted to clear the alley, Mr Tomlinson was one of those in the way. He was struck from behind on the leg by a baton wielded by PC Harwood. He was then pushed to the ground. PC Harwood told the court he had pushed Mr Tomlinson "firmly" but had not meant to push him over.</p> 
+							<p>Mr Tomlinson had been unable to break his fall as his hands had been in his pockets.</p>
+						</li>
+							
+						<li id='slide6'>
+							<h1>Collapse: 6 of 6 </h1>
+							<p>After being helped up by a passer-by, Mr Tomlinson continued down Cornhill for approximately 70m (230ft), before collapsing.</p>
+							<p>He received treatment at the scene and died later in hospital at 20:10.</p>
+							<p>Initially, a Home Office pathologist said a heart attack had been the cause of death, but further post-mortem examinations indicated Mr Tomlinson had died from an injury to his liver that caused internal bleeding and a cardiac arrest.</p>
+						</li>
+					</ul>
+					
+				</div>
+				<div id="map">
+				</div>
+			</div>
+		</div>
+				
+	</body>
+</html>
