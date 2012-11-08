@@ -34,13 +34,13 @@
 				// Adding the first overlay
 				pop.image({
 				  "start": 1,
-				  "end": 2,
+				  "end": 2.5,
 				  "target": "overlay",
 				  "src": "https://dl.dropbox.com/u/29645873/Popcorn/scene1.png",
 				});
 				
-				// Pause after 1 second, wait for interaction
-				pop.cue(1, function() { pop.pause(); });
+				// Pause after 2 seconds, wait for interaction
+				pop.cue(2, function() { pop.pause(); });
 				
 				// Adding a roadmap of King William Street
 				pop.googlemap({
@@ -166,7 +166,7 @@
 					current : 1,
 					min : 1,
 					max : 6,
-					cues: [0, 1, 11, 20, 30, 39, 49]
+					cues: [0, 2, 11, 20, 30, 39, 49]
 				};
 
 				var list = $('ul#slide-deck');

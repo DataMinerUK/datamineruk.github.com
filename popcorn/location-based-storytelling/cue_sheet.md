@@ -5,12 +5,12 @@ Slide 1
 -------
 * 0: google map 1 on
 * 1: overlay 1 on
-* 1: pause 
+* 2: pause 
 * onclick next -> play 
 
 Slide 2
 -------
-* 2: overlay 1 off
+* 2.5: overlay 1 off
 * 3: video move starts
 * 9: video move stops, google map 1 off, google map 2 on
 * 10: overlay 2 on
