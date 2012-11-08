@@ -54,7 +54,7 @@ Slide 6
 * 40: video move starts
 * 47: video move stops, google map 5 off, google map 6 on (roadmap showing the street where Ian Tomlinson collapsed, latlong = 51.51347115335745,-0.08580359259030779)
 * 48: overlay 6 on
-* 49: pause
+* 50: pause
 * onclick prev -> seek to 39secs
 
 End
