@@ -65,7 +65,7 @@ body {
 
 	/* Header cells */
 	table#foi thead th {
-	    text-align: center;
+	    text-align: left;
 	    background: #66a9bd;
 	}
 	
