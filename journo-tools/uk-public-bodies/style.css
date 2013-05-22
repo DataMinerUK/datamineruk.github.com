@@ -44,3 +44,58 @@ body {
 		text-decoration:underline;
 		color: #FFFFFF;
 	}
+	
+	/* Style table*/
+	
+	table#foi{
+	    clear: both;
+	}
+
+	/* Self clearing - */
+	div.dataTables_wrapper:after {
+	    content: ".";
+	    display: block;
+	    clear: both;
+	    visibility: hidden;
+	    line-height: 0;
+	    height: 0;
+	}
+	html[xmlns] .dataTables_wrapper { display: block; }
+	* html .dataTables_wrapper { height: 1%; }
+
+	/* Header cells */
+	table#foi thead th {
+	    text-align: center;
+	    background: #66a9bd;
+	}
+	
+	/* Body cells */
+	table#foi tbody th {
+	    text-align: left;
+	    background: #91c5d4;
+	}
+
+	table#foi tbody td {
+	    text-align: left;
+	    background: #d5eaf0;
+	}
+
+	table#foi tbody tr.odd td {
+	    background: #bcd9e1;
+	}
+	
+	/* Footer cells */ 
+	table#foi tfoot th {
+	    background: #66a9bd;
+	    text-align: left;
+	}
+
+	table#foi tfoot td {
+	    background: #66a9bd;
+	    text-align: center;
+	    font-weight: bold;
+	}
+	
+	div.dataTables_wrapper {
+	    background-color: #719ba7;
+	}

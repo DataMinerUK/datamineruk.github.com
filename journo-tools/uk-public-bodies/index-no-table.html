@@ -12,6 +12,9 @@
 
         $(document).ready(function() {
 			
+			$('#foi').dataTable( {
+			            "sPaginationType": "full_numbers"
+			        } );
             var table = $('#foi').dataTable();
             table.fnSetColumnVis( 4, false );
 
