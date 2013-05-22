@@ -67,7 +67,7 @@ for row in reader: # Read a single row from the CSV file
 				else:
 					htmlfile.write('<td class="column_' + str(colnum) + '"><a target="_blank" href="' + column + '">FOI</a></td>\n')
 			if colnum == 5:
-				htmlfile.write('<td class="column_' + str(colnum) + '">' + column.lower().replace(",", "").replace(".", "").replace("companies", "company").replace("schoool", "school").replace("academies", "academy").replace("crematorium", "crematoria").replace("eir", "eir_only").replace("primary_school", "primary").replace("prob_board", "probation").replace("pta", "ita").replace("pubic_assets", "public_assets").replace("public_corperation", "public_corporation").replace("public_funding", "public_funded").replace("railway", "rail").replace("railways", "rail").replace("secondary_school", "secondary").replace("specialhb", "specialhealtha").replace("uk_ln", "london").replace("ukparliament", "parliament").replace("wma", "wda") + '</td>\n')
+				htmlfile.write('<td class="column_' + str(colnum) + '">' + column.lower().replace(",", "").replace(".", "").replace("companies", "company").replace("schoool", "school").replace("academies", "academy").replace("crematorium", "crematoria").replace("eir_only", "eir").replace("primary_school", "primary").replace("prob_board", "probation").replace("pta", "ita").replace("pubic_assets", "public_assets").replace("public_corperation", "public_corporation").replace("public_funding", "public_funded").replace("railway", "rail").replace("railways", "rail").replace("secondary_school", "secondary").replace("specialhb", "specialhealtha").replace("uk_ln", "london").replace("ukparliament", "parliament").replace("wma", "wda") + '</td>\n')
   			colnum += 1
   		htmlfile.write('</tr>\n')
 
