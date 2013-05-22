@@ -49,6 +49,7 @@ body {
 	
 	table#foi{
 	    clear: both;
+		display:none;
 	}
 
 	/* Self clearing - */
