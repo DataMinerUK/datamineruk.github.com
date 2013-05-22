@@ -66,36 +66,36 @@ body {
 	/* Header cells */
 	table#foi thead th {
 	    text-align: left;
-	    background: #66a9bd;
+	    background: #64879E;
 	}
 	
 	/* Body cells */
 	table#foi tbody th {
 	    text-align: left;
-	    background: #91c5d4;
+	    background: #88ABC2;
 	}
 
 	table#foi tbody td {
 	    text-align: left;
-	    background: #d5eaf0;
+	    background: #D0E0EB;
 	}
 
 	table#foi tbody tr.odd td {
-	    background: #bcd9e1;
+	    background: #EBF7F8;
 	}
 	
 	/* Footer cells */ 
 	table#foi tfoot th {
-	    background: #66a9bd;
+	    background: #88ABC2;
 	    text-align: left;
 	}
 
 	table#foi tfoot td {
-	    background: #66a9bd;
-	    text-align: center;
+	    background: #64879E;
+	    text-align: left;
 	    font-weight: bold;
 	}
 	
 	div.dataTables_wrapper {
-	    background-color: #719ba7;
+	    background-color: #88ABC2;
 	}
