@@ -1,0 +1,65 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>UK Search Sites</title>
+        <script id="cse__" type='text/javascript'>
+            var cx = '007514140488010388909:shkkphwuybc';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                '//www.google.com/cse/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+        </script>
+
+        <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+        <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+        <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+        
+        <script type="text/javascript" charset="utf-8">
+
+            $(document).ready(function() {
+                 $('#dropdown').change(function(){
+
+                    $("#___gcse_0").remove()
+                    $('#cse__').remove()
+                    $("#all").html("<gcse:search></gcse:search>")
+
+                    var cx = $('#dropdown').val();
+                    console.log(cx)
+                    var gcse = document.createElement('script');
+                    gcse.type = 'text/javascript';
+                    gcse.async = true;
+                    gcse.id = "cse__"
+                    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                        '//www.google.com/cse/cse.js?cx=' + cx;
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(gcse, s);
+                    console.log("re-created")                    
+                })
+            });
+    
+
+        </script>
+    </head>
+    <body>
+        <select id="dropdown">
+            <option value="007514140488010388909:shkkphwuybc">ALL</option>
+            <option value="007980695809349442572:sln4rpkb_fi">ARMED FORCES</option>
+            <option value="007980695809349442572:hcxt46authi">MINISTERIAL DEPARTMENT</option>
+            <option value="007980695809349442572:vlumvad5jyu">LOCAL COUNCIL</option>
+            <option value="007980695809349442572:c5-dcobxtk0">NHS</option>
+            <option value="007980695809349442572:qmsx2aq4cna">POLICE</option>
+            <option value="007980695809349442572:rjebt2n-phi">SCHOOL</option>
+            <option value="007980695809349442572:52kibp82bdg">UNIVERSITY</option>
+        </select>
+    
+            <div id="container">
+                <div id="all" class="search">
+                    <gcse:search></gcse:search>
+                </div>
+            </div>
+    </body>
+</html>
