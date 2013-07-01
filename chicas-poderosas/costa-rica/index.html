@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>P&aacute;jaros Amenazados</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/bootstrap.css" media="screen">
+		<link rel="stylesheet" href="css/bootstrap-responsive.css">
+		
+		<style>
+		
+		      .content {
+		        /*background: url("@routes.Assets.at("images/handmadepaper.png")") 0 0;*/
+		        filter: alpha(opacity=95);
+		        -moz-opacity: 0.95;
+		        -khtml-opacity: 0.95;
+		        opacity: 0.95;
+				margin-top: 5%;
+				text-align: center;
+		      }
+			h1 {
+				margin-bottom: 1em;
+			}
+			body {
+				font-size: 1.2em;
+			}
+			span {
+				font-weight: bold;
+			}
+			footer {
+				font-size: 0.6em;
+			}
+
+		</style>
+	</head>
+	
+	<body>
+		<div class="container">
+		      <div class="content well">
+		        <h1>P&aacute;jaros Amenazados</h1>
+				<p>En Costa Rica hay <span id="total">lots</span> especies de aves. Hoy <span id="threatened">some</span> est&aacute;n amenazadas, vulnerables o en peligro cr&iacute;tico.</p>
+				<hr>
+
+					<p>
+					Que sean escuchados siempre en el mundo virtual, al menos...
+					</p>
+
+					<a href="https://twitter.com/share"
+					  style="display: none"
+					  class="twitter-share-button"
+					  data-count="none"
+					  data-size="large"
+					  data-hashtags="chicaspoderosas"
+					  data-text="&iexcl;Escucha! Usted no me puede escuchar en Costa Rica de nuevo."
+					  data-lang="sp">Tweet</a>
+
+				<footer>
+					<div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="http://images.cdn.fotopedia.com/flickr-3185937114-hd.jpg"><span property="dct:title">20070816-027</span> (<a rel="cc:attributionURL" property="cc:attributionName" href="http://www.fotopedia.com/users/raphael">Rapha&euml;l Fauveau</a>) / <a rel="license" href="http://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></div>
+				</footer>
+		      </div>
+		    </div>
+		<script type="text/javascript" src="js/jquery-1.10.1.js"></script>
+		<script type="text/javascript" src="js/jquery.backstretch.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript">
+			$.backstretch("img/flickr-3185937114-original.jpg");
+
+			// Add bird counts.
+			var counts_url = "https://premium.scraperwiki.com/df3pg4q/53a74031e25f4f0/sql/?q=select%20status%2C%20count(*)%20as%20count%20from%20%0A(select%0A%20%20%20%20CASE%0A%20%20%20%20%20%20WHEN%20lower(Status)%20LIKE%20%22%25threatened%25%22%20THEN%0A%20%20%20%20%20%20%20%20%22threatened%22%0A%20%20%20%20%20%20WHEN%20lower(Status)%20LIKE%20%22%25vulnerable%25%22%20THEN%0A%20%20%20%20%20%20%20%20%22vulnerable%22%0A%20%20%20%20%20%20WHEN%20lower(Status)%20LIKE%20%22%25endangered%25%22%20THEN%0A%20%20%20%20%20%20%20%20%22endangered%22%0A%20%20%20%20%20%20ELSE%0A%20%20%20%20%20%20%20%20%22%22%0A%20%20%20%20END%20as%20status%0Afrom%20swdata)%0Agroup%20by%20status%3B"
+
+			$.ajax({
+				dataType: "jsonp",
+				url: counts_url,
+				success: function(results) {
+					var total = 0;
+					var threatened = 0;
+					
+					results.forEach(function(result) {
+						total += result.count;
+						if (result.status !== "") {
+							threatened += result.count;
+						}
+					});
+
+					$("#total").text(total);
+					$("#threatened").text(threatened);
+				}
+			});
+			
+			// Add tweet button.
+			var endangered_url = "https://premium.scraperwiki.com/ct6jshi/22d2b6bf5921438/sql/?q=select%0A%20%20%20%20name%2C%0A%20%20%20%20audio%0Afrom%20swdata%0Aorder%20by%20random()%0Alimit%201";
+			
+			$.ajax({
+				dataType: "jsonp",
+				url: endangered_url,
+				success: function(results) {
+					var name = results[0].name;
+					var audio = results[0].audio;
+				
+					$('a.twitter-share-button').attr('data-url', audio);
+					var current_text = $('a.twitter-share-button').attr('data-text');
+					$('a.twitter-share-button').attr('data-text', current_text + " " + name + ": ");
+					
+					// Buttonize it!
+					!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+				}
+			});
+		</script>
+	</body>
+</html>
