@@ -63,7 +63,7 @@ I'm here to tell you...
 
 Why not to use copy and paste
 
-![](images/dont-do-it-1.jpg)
+![](images/dont-do-it-1.JPG)
 
 !SLIDE x=1600
 
