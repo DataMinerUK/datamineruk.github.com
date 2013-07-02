@@ -1,0 +1,41 @@
+/* add your css style rules here */
+
+
+.step {
+  width: 795px;
+  height: 590px;
+  font-size: 36px;
+  color: #040707;
+  font-family: Verdana;
+  text-align: center;
+  border-color: #040707;
+  border-width: 5px;
+  border-style: solid;
+  opacity: 0.7;
+  background-color: #EB5C65;
+}
+
+.step.notop {
+	border-top-color: #EB5C65;
+}
+
+.step.nobottom {
+	border-bottom-color: #EB5C65;
+}
+
+.step.final {
+	border-style: none;
+	opacity: 0;
+	background-color: #FFFFFF;
+}
+
+
+.step.active {
+  opacity: 1;
+}
+
+code {
+  background-color: #EB5C65;
+  font-size: 60px;
+}
+
