@@ -57,13 +57,13 @@ code {
 
 I'm here to tell you...
 
-![](images/la-foto-round-1.JPG)
+![](images/la-foto-round-1.jpg)
 
 !SLIDE x=800
 
 Why not to use copy and paste
 
-![](images/dont-do-it-1.JPG)
+![](images/dont-do-it-1.jpg)
 
 !SLIDE x=1600
 
