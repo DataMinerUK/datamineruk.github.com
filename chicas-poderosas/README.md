@@ -13,6 +13,6 @@ Like them on [Facebook](https://www.facebook.com/chicaspoderosas.org) and follow
 Costa Rica
 ----------
 
-For the event in Costa Rica I used [ScraperWiki](https://scraperwiki.com) to scrape the Costa Rican entries in [Avibase](http://avibase.bsc-eoc.org), the world bird database. See the code for the scraper in this [gist]. I then selected the threatened, vulnerable and endangered species and scraped audio files for them from [xeno-canto](http://xeno-canto.org). See the code for the scraper in this [gist]. Audio files are under a [Creative Commons license](http://creativecommons.org/licenses/by-nc-sa/3.0/). 
+For the event in Costa Rica I used [ScraperWiki](https://scraperwiki.com) to scrape the Costa Rican entries in [Avibase](http://avibase.bsc-eoc.org), the world bird database. See the code for the scraper in this [gist](https://gist.github.com/DataMinerUK/5907695). I then selected the threatened, vulnerable and endangered species and scraped audio files for them from [xeno-canto](http://xeno-canto.org). See the code for the scraper in this [gist](https://gist.github.com/DataMinerUK/5907755). Audio files are under a [Creative Commons license](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
-I then built [this]() webpage for which you can find the code in the Costa Rica folder.
+I then built [this](http://datamineruk.github.io/chicas-poderosas/costa-rica/) webpage for which you can find the code in the Costa Rica folder.
