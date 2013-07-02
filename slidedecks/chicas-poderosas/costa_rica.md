@@ -111,7 +111,7 @@ Digging deep into the web
 
 Piecing information together
 
-![](images/jigsaw-1.jpg
+![](images/jigsaw-1.jpg)
 
 !SLIDE notop nobottom x=4000 y=-1200 rotate=360 rotate-x=180
 
