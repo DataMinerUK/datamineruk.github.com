@@ -9,15 +9,12 @@
 %css
 
 .step {
-  width: 795px;
-  height: 590px;
+  width: 760px;
+  height: 600px;
   font-size: 36px;
   color: #040707;
   font-family: Verdana;
   text-align: center;
-  border-color: #040707;
-  border-width: 5px;
-  border-style: solid;
   opacity: 0.7;
   background-color: #EB5C65;
 }
@@ -125,6 +122,6 @@ And you can set it to update...
 
 ![](images/clock-1.png)
 
-!SLIDE final x=1800 y=-1400 z=-1 scale=8 rotate=720
+!SLIDE final x=1800 y=-1400 z=-1 scale=6 rotate=720
 
 So you can **build** the medium to tell the story itself!

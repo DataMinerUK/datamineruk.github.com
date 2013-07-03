@@ -2,15 +2,12 @@
 
 
 .step {
-  width: 795px;
-  height: 590px;
+  width: 760px;
+  height: 600px;
   font-size: 36px;
   color: #040707;
   font-family: Verdana;
   text-align: center;
-  border-color: #040707;
-  border-width: 5px;
-  border-style: solid;
   opacity: 0.7;
   background-color: #EB5C65;
 }
