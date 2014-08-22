@@ -1,6 +1,7 @@
 #circle circle {
   fill: none;
   pointer-events: all;
+ /* -webkit-transform: scale(0.5);*/
   
 }
 
