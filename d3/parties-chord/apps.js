@@ -72,23 +72,41 @@ d3.csv("parties.csv", function(parties) {
         .style("fill", function(d) { return parties[d.source.index].color; })
         .attr("d", path);
 
-    // Add title for each chord.
-    // chord.append("title").text(function(d) {
-    //   return "Intending to vote "
-    //       + parties[d.source.index].name
-    //       + " having voted " + parties[d.target.index].name
-    //       + " in the last election: " + d.source.value + "%"
-    //       + "\n" + "Intending to vote "
-    //       + parties[d.target.index].name
-    //       + " having voted " + parties[d.source.index].name
-    //       + " in the last election: " + d.target.value + "%";
-    // });
-
     function mouseover(d, i) {
       chord.classed("fade", function(p) {
         return p.source.index != i
             && p.target.index != i;
       });
+
+      console.log(parties);
+      console.log(matrix);
+      console.log(d);
+      console.log(i);
+
+      var description = "";
+
+        var party = parties[i];
+        var intentions = matrix[i];
+        for(var j = 0; j < intentions.length; j++){
+            var inflow = matrix[i][j];
+            var outflow = matrix[j][i];
+            var comparisonParty = parties[j];
+
+            description += "Intending to vote "
+              + party.name
+              + " having voted " + comparisonParty.name
+              + " in the last election: " + inflow + "%"
+              + "\n" + "Intending to vote "
+              + comparisonParty.name
+              + " having voted " + party.name
+              + " in the last election: " + outflow + "%"
+              + "<br><br>";
+        }
+
+ 
+
+        
+        document.getElementById("description").innerHTML=description;
     }
   });
 });

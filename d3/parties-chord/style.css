@@ -22,3 +22,16 @@ text {
 	font-size: 12px;
 	font-family: Arial;
 }
+
+#description {
+	float: left;
+	max-width: 250px;
+	padding: 10px;
+	background-color: #EAEAEA;
+	font-size: 12px;
+	font-family: Arial;
+}
+
+#chord {
+	float: left;
+}
