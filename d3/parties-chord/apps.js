@@ -74,12 +74,14 @@ d3.csv("parties.csv", function(parties) {
 
     // Add an elaborate mouseover title for each chord.
     chord.append("title").text(function(d) {
-      return parties[d.source.index].name
-          + " -> " + parties[d.target.index].name
-          + ": " + d.source.value + "%"
-          + "\n" + parties[d.target.index].name
-          + " -> " + parties[d.source.index].name
-          + ": " + d.target.value + "%";
+      return "Intending to vote "
+          + parties[d.source.index].name
+          + " having voted " + parties[d.target.index].name
+          + " in the last election: " + d.source.value + "%"
+          + "\n" + "Intending to vote "
+          + parties[d.target.index].name
+          + " having voted " + parties[d.source.index].name
+          + " in the last election: " + d.target.value + "%";
     });
 
     function mouseover(d, i) {
