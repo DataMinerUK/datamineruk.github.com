@@ -1,3 +1,39 @@
+var spreadsheetURL = {
+  "sheet1": "https://spreadsheets.google.com/feeds/list/1O82vKugVL7nW60U3NLLtJMG_4nhU8E3UpCgTfzRrD6E/od6/public/values?alt=json"
+};
+var spreadsheetData = {
+  'sheet1':[]
+};
+//ajax request from google sheet
+var dataFetch = function(url) {
+    $.ajax({
+    url: url,
+    type: "get",
+    dataType: "json",
+      success: function(data) {
+        for(var i in data.feed.entry) {
+        var spreadsheetRow = [];
+        // make an object of the rows 
+        // Keys are column names, lower case with spaces stripped out and special characters removed
+        // converts strings to floats if they are 0-9 with commas or periods
+        for(var k in data.feed.entry[i]) {
+          if(k.substr(0, 4) == 'gsx$'){
+            spreadsheetRow.push(parseFloat(data.feed.entry[i][k].$t));
+          }
+        }
+        spreadsheetData.sheet1.push(spreadsheetRow);
+
+      }
+      console.log(spreadsheetData.sheet1);
+      runD3(spreadsheetData.sheet1);
+      }
+    });
+}
+
+//get cells in first sheet, arrange in rows
+dataFetch(spreadsheetURL.sheet1);
+// console.log(re);
+
 var width = 650,
     height = 650,
     outerRadius = Math.min(width, height) / 2 - 10,
@@ -27,8 +63,10 @@ var svg = d3.select("#chord").append("svg")
 svg.append("circle")
     .attr("r", outerRadius);
 
-d3.csv("parties.csv", function(parties) {
-  d3.json("matrix.json", function(matrix) {
+function runD3(matrix) {
+
+  d3.csv("parties.csv", function(parties) {
+  // d3.json("matrix.json", function(matrix) {
 
     // Compute the chord layout.
     layout.matrix(matrix);
@@ -60,7 +98,7 @@ d3.csv("parties.csv", function(parties) {
         .attr("xlink:href", function(d, i) { return "#group" + i; })
         .text(function(d, i) { return parties[i].name; });
 
-    // Remove the labels that don't fit. :(
+    // Remove the labels that don"t fit. :(
     groupText.filter(function(d, i) { return groupPath[0][i].getTotalLength() / 2 - 16 < this.getComputedTextLength(); })
         .remove();
 
@@ -78,10 +116,10 @@ d3.csv("parties.csv", function(parties) {
             && p.target.index != i;
       });
 
-      console.log(parties);
-      console.log(matrix);
-      console.log(d);
-      console.log(i);
+      // console.log(parties);
+      // console.log(matrix);
+      // console.log(d);
+      // console.log(i);
 
       var description = "";
 
@@ -103,10 +141,9 @@ d3.csv("parties.csv", function(parties) {
               + "<br><br>";
         }
 
- 
-
         
         document.getElementById("description").innerHTML=description;
     }
-  });
+  // });
 });
+}
