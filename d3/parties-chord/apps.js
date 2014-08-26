@@ -99,8 +99,8 @@ function runD3(matrix) {
         .text(function(d, i) { return parties[i].name; });
 
     // Remove the labels that don"t fit. :(
-    groupText.filter(function(d, i) { return groupPath[0][i].getTotalLength() / 2 - 16 < this.getComputedTextLength(); })
-        .remove();
+    // groupText.filter(function(d, i) { return groupPath[0][i].getTotalLength() / 2 - 16 < this.getComputedTextLength(); })
+    //     .remove();
 
     // Add the chords.
     var chord = svg.selectAll(".chord")
