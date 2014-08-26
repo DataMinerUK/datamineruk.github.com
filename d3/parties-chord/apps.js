@@ -121,24 +121,39 @@ function runD3(matrix) {
       // console.log(d);
       // console.log(i);
 
-      var description = "";
+      
 
         var party = parties[i];
+        var description = "<h3>" + party.name + "</h3>";
         var intentions = matrix[i];
         for(var j = 0; j < intentions.length; j++){
             var inflow = matrix[i][j];
             var outflow = matrix[j][i];
             var comparisonParty = parties[j];
 
+            if (i != j) {
+
+            var statement = (inflow > outflow ? "<b>" + party.name + "</b> has gained <b>" + (inflow - outflow).toFixed(2) + "%</b> of voters from <b>" + comparisonParty.name + "</b>" : "<b>" + party.name + "</b> has lost <b>" + (outflow - inflow).toFixed(2) + "%</b> of voters to <b>" + comparisonParty.name + "</b>");
+
             description += "Intending to vote "
               + party.name
               + " having voted " + comparisonParty.name
-              + " in the last election: " + inflow + "%"
+              + " in the last election: <b>" + inflow + "%</b>"
               + "\n" + "Intending to vote "
               + comparisonParty.name
               + " having voted " + party.name
-              + " in the last election: " + outflow + "%"
+              + " in the last election: <b>" + outflow + "%</b>"
+              + "<br>"
+              + statement
               + "<br><br>";
+            }
+            else {
+              description += "Intending to vote "
+              + party.name
+              + " having voted " + comparisonParty.name
+              + " in the last election: <b>" + inflow + "%</b>"
+              + "<br><br>";
+            }
         }
 
         
