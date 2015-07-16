@@ -1,3 +1,6 @@
 [submodule "thermostat"]
 	path = thermostat
 	url = https://github.com/DataMinerUK/thermostat
+[submodule "bowling-challenge"]
+	path = bowling-challenge
+	url = https://github.com/DataMinerUK/bowling-challenge
