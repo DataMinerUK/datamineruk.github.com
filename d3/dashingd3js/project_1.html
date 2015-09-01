@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<script src="http://d3js.org/d3.v3.min.js"  charset="utf-8"></script>
+  </head>
+  <body>
+      	<script type="text/javascript">
+
+      	var theData = [ 1, 2, 3 ]
+
+      	var p = d3.select("body").selectAll("p")
+      			  .data(theData)
+      			  .enter()
+      			  .append("p")
+      			  .text("hello");
+
+  		var bodySelection = d3.select("body");
+
+  		var svgSelection = bodySelection.append("svg")
+ 		  .attr("width", 50)
+ 		  .attr("height", 50);
+
+ 		 var circleSelection = svgSelection.append("circle")
+ 		  .attr("cx", 25)
+ 		  .attr("cy", 25)
+ 		  .attr("r", 25)
+ 		  .style("fill", "hotpink");
+
+  	</script>
+  </body>
+</html>
