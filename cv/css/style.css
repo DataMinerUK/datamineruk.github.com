@@ -1,4 +1,7 @@
-body { padding-top: 60px; }
+body {
+  padding-top: 60px;
+  font-size: 1.8em !important;
+}
 
 .parallax-window {
   min-height: 1700px;
@@ -6,5 +9,5 @@ body { padding-top: 60px; }
 }
 
 section {
-  padding-top: 60px;
+  padding-top: 50px;
 }
