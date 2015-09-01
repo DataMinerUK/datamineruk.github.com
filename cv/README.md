@@ -37,6 +37,7 @@ Descriptive paragraph of how capable you are at this skill and, if relevant, how
 ## Education
 
 #### Makers Academy (start_date to end_date)
+June - September 2015 
 
 - Curiosity and hungry passion for code
 - Independent learner and problem-solver
@@ -69,7 +70,7 @@ May 2013 - Present
 
 The programmer-journalist in a three person team spearheading data driven investigative journalism across both Times titles. Working with journalists to source, clean and analyze data for exclusive stories as well as building prototypes for the interactive developers and online designers.
 
-Latest projects include Gender Gap (http://www.thesundaytimes.co.uk/sto/public/gendergap/) and Colossus (http://www.thetimes.co.uk/tto/public/colossus/)
+Latest projects include [Gender Gap] (http://www.thesundaytimes.co.uk/sto/public/gendergap/) and [Colossus] (http://www.thetimes.co.uk/tto/public/colossus/)
 
 #### Knight-Mozilla OpenNews Fellow at Guardian Group
 January 2012 - January 2013
@@ -86,7 +87,7 @@ September 2010 - February 2011
 
 A producer for CNN's initiative to integrate web and TV, cross platform projects and reporting using social media tools with a focus on television output.  I was working across all news shows, sports and prime time feature shows.
 
-#### Researcher at The Centre for Investigative Journalism 
+#### Researcher at The Centre for Investigative Journalism
 August 2009 - August 2010
 
 Worked with The Independent and The Sunday Times journalist, Martin Tomkinson, on a large-scale, long-term investigation into the dirty dealings of a multinational company.
