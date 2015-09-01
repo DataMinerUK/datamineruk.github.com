@@ -8,10 +8,8 @@ Left CNN International to learn to code with tech startup ScraperWiki, becoming 
 
 ## Skills
 
-#### This Skill
-
 ##### Programming
-Python, HTML, CSS, JavaScript, R, MySQL
+Python, HTML, CSS, JavaScript, R, MySQL, Ruby, Rails, Angular, Ionic, Rspec, Capybara, Jasmine, Protractor...
 
 ##### Journalism
 Digital Media, Web Editing, Broadcast Journalism, News Writing, Blogging, New Media, Video Editing, Social Media
@@ -19,25 +17,10 @@ Digital Media, Web Editing, Broadcast Journalism, News Writing, Blogging, New Me
 ##### Speaker and Trainer
 Keynote speaker at OKFn Festival Barcelona. Given talks at SxSW, NewsRewired and various meetup groups. Provided technical training to journalists at Al Jazeera and The Times. Technologist at Peace Tech Exchange Myanmar.
 
-Descriptive paragraph of how capable you are at this skill and, if relevant, how it has developed.
-
-- Experience
-- Achievements
-- Evidence
-
-#### Another Skill
-
-Descriptive paragraph of how capable you are at this skill and, if relevant, how it has developed.
-
-- I achieved A during my work at B (job, or otherwise)
-- I contributed to the growth of X while doing Y (job, or otherwise)
-- I built this, made this, broke this, fixed this, etc.
-- A link to some on-line evidence (blogs, videos, articles, etc.)
-
 ## Education
 
 #### Makers Academy (start_date to end_date)
-June - September 2015 
+June - September 2015
 
 - Curiosity and hungry passion for code
 - Independent learner and problem-solver
@@ -55,13 +38,8 @@ Masters', Anthropology of Media, 2007 -2008
 #### Trinity College, Dublin
 Undergraduate, Theoretical Physics, Zoology, 2002 -2007
 
-#### Your University / College (start_date to end_date)
-
-- Subject, any specialisms
-- Grade
-- Other cool stuff
-
 #### Any other qualifications
+PADI Advanced underwater diver
 
 ## Experience
 
@@ -91,12 +69,6 @@ A producer for CNN's initiative to integrate web and TV, cross platform projects
 August 2009 - August 2010
 
 Worked with The Independent and The Sunday Times journalist, Martin Tomkinson, on a large-scale, long-term investigation into the dirty dealings of a multinational company.
-
-
-**Company Name** (start_date to end_date)
-*Your job title*  
-**Company Name** (start_date to end_date)
-*Your job title*  
 
 #### Honors and Awards
 
