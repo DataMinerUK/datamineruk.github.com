@@ -1,5 +1,5 @@
 body {
-  padding-top: 60px;
+  padding-top: 50px;
   font-size: 1.8em !important;
 }
 
@@ -10,4 +10,11 @@ body {
 
 section {
   padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+#intro {
+  text-align: center;
+  font-family: Courier;
+
 }

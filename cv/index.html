@@ -4,11 +4,22 @@
   	<meta charset="utf-8">
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/parallax.min.js"></script>
-    <!-- <script src="js/custom.js"></script>
-    <script src="js/scrollTo.js"></script>
-    <script src="js/scrollspy.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/how-animations.js"></script> -->
+    <script src="js/typed.js"></script>
+    <script>
+      $(function(){
+          $("#intro").typed({
+            strings: ["Journalist turned programmer.",
+                      "Promoter of women in tech.",
+                      "Wanderer of the world.",
+                      "Advocate for the open web.",
+                      "Advocate for Open Source.",
+                      "Advocate for Open Data.",
+                      "Learner of a great many things.",
+                      "Scroll down to read more about her."],
+            typeSpeed: 0
+          });
+      });
+    </script>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -45,6 +56,9 @@
 
     </nav>
 
+    <section>
+      <div id="intro"></div>
+    </section>
 
     <div class="parallax-window" data-parallax="scroll" data-image-src="img/skills.png"></div>
     <section id="skills">
@@ -133,7 +147,10 @@
 
       </div>
     </section>
-
-
+    <!-- <script>
+      $(function () {
+        $('[data-typer-targets]').typer();
+      });
+    </script> -->
     <script src="js/bootstrap.min.js"></script>
   </body>
