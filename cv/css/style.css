@@ -4,7 +4,9 @@ body {
 }
 
 .parallax-container {
-  min-height: 1700px;
+  /*padding-top: 1700px;*/
+  /*min-height: 1700px;*/
+  height: 1700px;
   width: 100%;
   background: transparent;
   background-size: cover !important;
