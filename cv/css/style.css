@@ -3,13 +3,13 @@ body {
   font-size: 1.8em !important;
 }
 
-.parallax-container {
+/*.parallax-container {
   height: 500px;
   width: 100%;
-}
+}*/
 
-.parallax-window {
-  height: 1700px;
+.parallax-container {
+  min-height: 1700px;
   width: 100%;
   background: transparent;
   background-size: cover !important;
