@@ -1,6 +1,11 @@
 body {
   padding-top: 50px;
   font-size: 1.7em !important;
+  color: #525252 !important;
+}
+
+h2 {
+  color: black !important;
 }
 
 .parallax-container {
@@ -13,6 +18,10 @@ body {
 section {
   padding-top: 50px;
   padding-bottom: 20px;
+  font-family: Courier;
+  border-style: groove;
+  border-color: gray;
+  border-width: 8px;
 }
 
 #intro {
@@ -20,4 +29,5 @@ section {
   text-align: center;
   font-family: Courier;
   margin-bottom: 20px;
+  color: black !important;
 }
