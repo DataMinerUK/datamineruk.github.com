@@ -3,6 +3,11 @@ body {
   font-size: 1.8em !important;
 }
 
+.parallax-container {
+  height: 500px;
+  width: 100%;
+}
+
 .parallax-window {
   height: 1700px;
   width: 100%;
