@@ -7,7 +7,7 @@ body {
   height: 1700px;
   width: 100%;
   background: transparent;
-  background-size: cover;
+  background-size: cover !important;
 }
 
 section {
