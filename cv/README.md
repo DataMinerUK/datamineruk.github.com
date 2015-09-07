@@ -2,14 +2,14 @@
 
 Journalist turned programmer. Promoter of women in tech. Wanderer of the world and learner of a great many things.
 
-Advocate for OpenData; its use and communication. I believe OpenData is as powerful as freedom of speech. Paired with inclusivity and a free and open web, I believe in its potential as a powerful conduit for knowledge-share.
+Full stack developer. Advocate for OpenData; its use and communication. I believe OpenData is as powerful as freedom of speech. Paired with inclusivity and a free and open web, I believe in its potential as a powerful conduit for knowledge-share.
 
 Left CNN International to learn to code with tech startup ScraperWiki, becoming a Knight-Mozilla OpenNews fellow at the Guardian in 2012 and a data journalist at the Times & Sunday Times the following year. Spent three intensive moths at Makers Academy learning web development skills.
 
 ## Skills
 
 ##### Programming
-Python, HTML, CSS, JavaScript, R, MySQL, Ruby, Rails, Angular, Ionic, Rspec, Capybara, Jasmine, Protractor...
+Python, HTML, CSS, JavaScript, R, MySQL, Ruby, Rails, Angular, Ionic, Firebase, Postgres, Rspec, Capybara, Jasmine, Protractor...
 
 ##### Journalism
 Digital Media, Web Editing, Broadcast Journalism, News Writing, Blogging, New Media, Video Editing, Social Media
@@ -19,24 +19,42 @@ Keynote speaker at OKFn Festival Barcelona. Given talks at SxSW, NewsRewired and
 
 ## Education
 
-#### Makers Academy (start_date to end_date)
+#### Makers Academy
 June - September 2015
 
-- Curiosity and hungry passion for code
-- Independent learner and problem-solver
-- OOP, TDD, SOLID, MVC, DDD
-- Software Craftsmanship
-- Ruby, Rails, Javascript, Node.js, Angular.js
-- Rspec, Jasmine, Mocha
+- Developed a curiosity and passion for creating with code
+- Pair programmed but also learned to indpendently solve problems
+- Used OOP, SOLID, TDD, BDD, MVP principles
+- Crafted software with Ruby, Sinatra, Rails, Javascript, Angular.js, Rspec, and Jasmine amongst many and counting
+
+#### Coursera
+
+- Computer Science 101 - Stanford University
+- Learning to Program: Crafting Quality Code - University of Toronto
+- Computing for Data Analysis - John Hopkins University
+- Introduction to Data Science - University of Washington
+- Statistics: Making Sense of Data - University of Toronto
 
 #### Cardiff University / Prifysgol Caerdydd
 PG Dip, Broadcast Journalism, 2008 -2009
 
+- Became adept at using all studio equipment as well as editing video and sound
+- Brought about a passion for story telling through various media
+- Solidified the importance of fact-checking and knowing legal frameworks
+
 #### School of Oriental and African Studies, University of London
 Masters', Anthropology of Media, 2007 -2008
 
+- Understood the cultural significance of a mediated experience
+- Gained insights via group study and debate
+- Produced a multimedia thesis as paper is a dying medium
+
 #### Trinity College, Dublin
 Undergraduate, Theoretical Physics, Zoology, 2002 -2007
+
+- Double major allowed after gaining a scholarship
+- Learned to find elegant solutions based on experimentation at both a theoretical and practical level
+- First female Trinity Scholar in Theoretical Pyhsics
 
 #### Any other qualifications
 PADI Advanced underwater diver
@@ -46,7 +64,8 @@ PADI Advanced underwater diver
 #### Data Journalist at The Times & Sunday Times
 May 2013 - Present
 
-The programmer-journalist in a three person team spearheading data driven investigative journalism across both Times titles. Working with journalists to source, clean and analyze data for exclusive stories as well as building prototypes for the interactive developers and online designers.
+The programmer-journalist in a three person team spearheading data driven investigative journalism across both Times titles.
+Worked with journalists to source, clean and analyze data for exclusive stories as well as building prototypes for the interactive developers and online designers.
 
 Latest projects include [Gender Gap] (http://www.thesundaytimes.co.uk/sto/public/gendergap/) and [Colossus] (http://www.thetimes.co.uk/tto/public/colossus/)
 
