@@ -1,4 +1,4 @@
-## Nicola Hughes
+## Nicola Hughes - view as [webpage](http://datamineruk.github.io/cv)
 
 Journalist turned programmer. Promoter of women in tech. Wanderer of the world and learner of a great many things.
 
@@ -62,12 +62,12 @@ PADI Advanced underwater diver
 ## Experience
 
 #### Data Journalist at The Times & Sunday Times
-May 2013 - Present
+May 2013 - June 2015
 
 The programmer-journalist in a three person team spearheading data driven investigative journalism across both Times titles.
 Worked with journalists to source, clean and analyze data for exclusive stories as well as building prototypes for the interactive developers and online designers.
 
-Latest projects include [Gender Gap] (http://www.thesundaytimes.co.uk/sto/public/gendergap/) and [Colossus] (http://www.thetimes.co.uk/tto/public/colossus/)
+Latest projects include [Gender Gap](http://www.thesundaytimes.co.uk/sto/public/gendergap/) and [Colossus](http://www.thetimes.co.uk/tto/public/colossus/)
 
 #### Knight-Mozilla OpenNews Fellow at Guardian Group
 January 2012 - January 2013
@@ -91,7 +91,7 @@ Worked with The Independent and The Sunday Times journalist, Martin Tomkinson, o
 
 #### Honors and Awards
 
-Award of Excellence by the Society of News Design  – Colossus interactive graphic
-Speaking position at the Royal Statistical Society International Conference – Gender Gap interactive graphic
-Knight-Mozilla OpenNews Fellow 2012
-Trinity Scholar 2003
+- Award of Excellence by the Society of News Design  – Colossus interactive graphic
+- Speaking position at the Royal Statistical Society International Conference – Gender Gap interactive graphic
+- Knight-Mozilla OpenNews Fellow 2012
+- Trinity Scholar 2003
