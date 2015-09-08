@@ -19,9 +19,7 @@ section {
   padding-top: 50px;
   padding-bottom: 20px;
   font-family: Courier;
-  border-style: groove;
-  border-color: gray;
-  border-width: 8px;
+  background-color: #F8F8F8 !important;
 }
 
 #intro {
